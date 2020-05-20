@@ -8,7 +8,8 @@
     "@Limych"
   ],
   "requirements": [
-    "beward~=1.0"
+    "beward~=1.0.8",
+    "ha-ffmpeg==2.0"
   ],
   "ssdp": {
     "st": [

@@ -9,11 +9,10 @@ import json
 import logging
 import os
 import re
+import sys
 
 # http://docs.python.org/2/howto/logging.html#library-config
 # Avoids spurious error messages if no logger is configured by the user
-import sys
-
 logging.getLogger(__name__).addHandler(logging.NullHandler())
 
 # logging.basicConfig(level=logging.DEBUG)
@@ -89,7 +88,8 @@ def update_tracker(tracker_fpath):
             for file in files:
                 file = os.path.join(current_path, file).replace("\\", "/")
                 if file != local_path:
-                    resources.append(base_url + file[len(base_path) :])
+                    i = len(base_path)
+                    resources.append(base_url + file[i:])
         resources.sort()
         tracker[package]["resources"] = resources
 
