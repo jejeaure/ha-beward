@@ -61,7 +61,7 @@ CAMERAS: Dict[str, list] = {
 
 def setup_platform(hass, config, add_entities, discovery_info=None):
     """Set up a cameras for a Beward device."""
-    if discovery_info is None:
+    if discovery_info is None:  # pragma: no cover
         return
 
     name = discovery_info[CONF_NAME]

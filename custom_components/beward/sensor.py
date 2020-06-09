@@ -50,7 +50,7 @@ SENSORS = {
 
 async def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
     """Set up a binary sensors for a Beward device."""
-    if discovery_info is None:
+    if discovery_info is None:  # pragma: no cover
         return
 
     name = discovery_info[CONF_NAME]
