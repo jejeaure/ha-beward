@@ -85,7 +85,7 @@ CONFIG_SCHEMA = vol.Schema(
 def setup(hass, config):
     """Set up component."""
     conf = config.get(DOMAIN)
-    if conf is None:
+    if conf is None:  # pragma: no cover
         return True
 
     # Print startup message
@@ -280,7 +280,7 @@ class BewardController:
             self.event_timestamp[event] = timestamp
         self.event_state[event] = state
 
-    def _cache_image(self, event: str, image):
+    def _cache_image(self, event: str, image):  # pragma: no cover
         """Save image for event to cache."""
         image_path = self.history_image_path(event)
         tmp_filename = ""
