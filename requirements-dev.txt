@@ -1,6 +1,6 @@
 -r requirements.txt
 -r requirements-pre-commit.txt
-mypy==0.770
+mypy==0.780
 pre-commit~=2.4
 pylint~=2.5
 pylint-strict-informational==0.1
