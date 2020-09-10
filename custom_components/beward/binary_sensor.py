@@ -3,16 +3,22 @@
 import logging
 from typing import Dict
 
+import beward
+
+try:
+    from homeassistant.components.binary_sensor import BinarySensorEntity
+except ImportError:
+    from homeassistant.components.binary_sensor import (
+        BinarySensorDevice as BinarySensorEntity,
+    )
 from homeassistant.components.binary_sensor import (
     DEVICE_CLASS_MOTION,
     DEVICE_CLASS_CONNECTIVITY,
-    BinarySensorEntity,
 )
 from homeassistant.const import CONF_NAME, CONF_BINARY_SENSORS
 from homeassistant.core import callback
 from homeassistant.helpers.dispatcher import async_dispatcher_connect
 
-import beward
 from .const import (
     EVENT_DING,
     EVENT_MOTION,
