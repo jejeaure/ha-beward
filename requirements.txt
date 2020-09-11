@@ -1,3 +1,3 @@
-homeassistant~=0.110.2
-beward~=1.0.8
+homeassistant~=0.114.4
+beward~=1.0
 ha-ffmpeg==2.0
